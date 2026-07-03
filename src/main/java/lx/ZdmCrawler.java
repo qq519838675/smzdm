@@ -1,6 +1,8 @@
 package lx;
 
 import java.net.HttpCookie;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -40,6 +42,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
 
@@ -71,13 +74,14 @@ public class ZdmCrawler {
                 emailPassword = System.getenv("emailPassword"), emailPort = envMap.getOrDefault("emailPort", "465"),
                 spt = System.getenv("spt");
         int maxPageSize = Integer.parseInt(envMap.getOrDefault("maxPageSize", "10")),
+                searchPageSize = Integer.parseInt(envMap.getOrDefault("searchPageSize", "1")),
                 minVoted = Integer.parseInt(envMap.getOrDefault("minVoted", "0")),
                 minComments = Integer.parseInt(envMap.getOrDefault("minComments", "0")),
                 minPushSize = Integer.parseInt(envMap.getOrDefault("MIN_PUSH_SIZE", "0"));
         boolean detail = "true".equals(envMap.getOrDefault("detail", "false"));
 
         //获取待推送的优惠信息
-        Collection<Zdm> zdms = obtainUnpushedArticles(maxPageSize);
+        Collection<Zdm> zdms = obtainUnpushedArticles(maxPageSize, searchPageSize);
 
         //根据各项规则执行过滤逻辑
         zdms = processFilter(zdms, minVoted, minComments, detail);
@@ -107,7 +111,7 @@ public class ZdmCrawler {
         });
     }
 
-    private static Collection<Zdm> obtainUnpushedArticles(int maxPageSize) {
+    private static Collection<Zdm> obtainUnpushedArticles(int maxPageSize, int searchPageSize) {
         //GitHub Actions部署的服务器一般在海外,调整为东八区的时区
         ZoneId zoneId = ZoneId.of("GMT+8");
         TimeZone.setDefault(TimeZone.getTimeZone(zoneId));
@@ -122,15 +126,7 @@ public class ZdmCrawler {
             for (int i = 1; i <= maxPageSize; i++) {
                 List<Zdm> zdmPart = processCrawl(url + i, MAX_RETRY);
                 zdmPart.forEach(zdm -> {
-                    //评论和点值数量的值后面会跟着'k','w'这种字符,将它们转换一下方便后面过滤和排序
-                    zdm.setComments(Utils.strNumberFormat(zdm.getComments()));
-                    zdm.setVoted(Utils.strNumberFormat(zdm.getVoted()));
-
-                    //转化为毫秒级时间戳
-                    String timestampStr = zdm.getTimesort() + "000";
-                    zdm.setArticle_time(Instant.ofEpochMilli(Long.parseLong(timestampStr))
-                            .atZone(zoneId)
-                            .toLocalDateTime().toString());
+                    normalizeArticle(zdm, zoneId, zdm.getTimesort());
                 });
                 zdmPage.addAll(zdmPart);
 
@@ -142,8 +138,25 @@ public class ZdmCrawler {
             return zdmPage.stream();
         });
 
-        return Stream.concat(crawled, unPush.stream())  //两个stream合并,一起参与排序和去重操作
-                .sorted(Comparator.comparing(Zdm::getComments, Comparator.comparingInt(Integer::parseInt)).reversed())    //评论数量倒序,用LinkedHashSet保证有序
+        HashSet<String> whiteWords = readWhiteWords();
+        Stream<Zdm> searched = Stream.empty();
+        if (!whiteWords.isEmpty() && searchPageSize > 0) {
+            searched = whiteWords.stream().flatMap(word -> {
+                List<Zdm> zdmPage = new ArrayList<>();
+                for (int i = 0; i < searchPageSize; i++) {
+                    int offset = i * ZDM_SEARCH_LIMIT;
+                    List<Zdm> zdmPart = processSearch(word, offset, zoneId, MAX_RETRY);
+                    zdmPage.addAll(zdmPart);
+                    System.out.println("关键词[" + word + "]搜索第" + (i + 1) + "页数据获取成功, 当前页数据条数" + zdmPart.size());
+                    ThreadUtil.sleep(ThreadLocalRandom.current().nextInt(1000, 2000));
+                }
+                return zdmPage.stream();
+            });
+        }
+
+        return Stream.of(crawled, searched, unPush.stream())  //三个stream合并,一起参与排序和去重操作
+                .flatMap(s -> s)
+                .sorted(Comparator.comparingInt((Zdm z) -> parseCount(z.getComments())).reversed())    //评论数量倒序,用LinkedHashSet保证有序
                 .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
@@ -181,14 +194,133 @@ public class ZdmCrawler {
         }
     }
 
+    private static List<Zdm> processSearch(String word, int offset, ZoneId zoneId, int retry) {
+        try {
+            String encodedWord = URLEncoder.encode(word, StandardCharsets.UTF_8);
+            String url = String.format(ZDM_SEARCH_URL, encodedWord, offset);
+            HttpRequest request = HttpUtil.createGet(url)
+                    .header(Header.USER_AGENT, Utils.ramdomUserAgent())
+                    .header(Header.REFERER, "https://search.smzdm.com/?c=home&s=" + encodedWord)
+                    .header(Header.ACCEPT, "application/json,text/plain,*/*")
+                    .header(Header.ACCEPT_LANGUAGE, "zh-CN,zh;q=0.9,en;q=0.8")
+                    .header(Header.CONNECTION, "keep-alive");
+
+            String s = request.execute().body();
+            JSONObject response = JSONObject.parseObject(s);
+            JSONObject data = response.getJSONObject("data");
+            if (data == null)
+                return new ArrayList<>();
+
+            JSONArray rows = data.getJSONArray("rows");
+            if (rows == null)
+                return new ArrayList<>();
+
+            List<Zdm> result = new ArrayList<>();
+            for (Object rowObj : rows) {
+                if (!(rowObj instanceof JSONObject))
+                    continue;
+
+                Zdm zdm = parseSearchArticle((JSONObject) rowObj, zoneId);
+                if (zdm != null)
+                    result.add(zdm);
+            }
+            return result;
+        } catch (IORuntimeException | HttpException | JSONException e) {
+            if (retry > 0) {
+                int minutes = (MAX_RETRY - retry + 1);
+                System.out.println("关键词[" + word + "]搜索接口调用失败,等待" + minutes + "分钟后进行重试,剩余重试次数:" + retry);
+                ThreadUtil.sleep((long) minutes * 60 * 1000);
+                return processSearch(word, offset, zoneId, retry - 1);
+            }
+            e.printStackTrace();
+            throw new RuntimeException("搜索接口调用失败,程序终止");
+        }
+    }
+
+    private static Zdm parseSearchArticle(JSONObject row, ZoneId zoneId) {
+        String channelType = row.getString("article_channel_type");
+        if (!"youhui".equals(channelType) && !"faxian".equals(channelType))
+            return null;
+
+        Zdm zdm = new Zdm();
+        zdm.setArticleId(row.getString("article_id"));
+        zdm.setTitle(row.getString("article_title"));
+        zdm.setUrl(row.getString("article_url"));
+        zdm.setPicUrl(row.getString("article_pic"));
+        zdm.setPrice(row.getString("article_price"));
+        zdm.setVoted(row.getString("article_worthy"));
+        zdm.setComments(row.getString("article_comment"));
+        zdm.setArticleMall(row.getString("article_mall"));
+        normalizeArticle(zdm, zoneId, row.getString("publish_date_lt"));
+
+        if (StringUtils.isBlank(zdm.getArticleId()) || StringUtils.isBlank(zdm.getTitle()) || StringUtils.isBlank(zdm.getUrl()))
+            return null;
+        return zdm;
+    }
+
+    private static void normalizeArticle(Zdm zdm, ZoneId zoneId, String timestamp) {
+        //评论和点值数量的值后面会跟着'k','w'这种字符,将它们转换一下方便后面过滤和排序
+        zdm.setComments(normalizeCount(zdm.getComments()));
+        zdm.setVoted(normalizeCount(zdm.getVoted()));
+
+        if (StringUtils.isBlank(zdm.getPrice()))
+            zdm.setPrice("");
+        if (StringUtils.isBlank(zdm.getPicUrl()))
+            zdm.setPicUrl("");
+        if (StringUtils.isBlank(zdm.getArticleMall()))
+            zdm.setArticleMall("");
+
+        String timestampStr = StringUtils.defaultIfBlank(timestamp, zdm.getTimesort());
+        if (StringUtils.isBlank(timestampStr)) {
+            zdm.setArticle_time(LocalDateTime.now(zoneId).toString());
+            return;
+        }
+
+        try {
+            long epoch = Long.parseLong(timestampStr);
+            long epochMillis = timestampStr.length() > 10 ? epoch : epoch * 1000;
+            zdm.setArticle_time(Instant.ofEpochMilli(epochMillis).atZone(zoneId).toLocalDateTime().toString());
+        } catch (NumberFormatException e) {
+            zdm.setArticle_time(LocalDateTime.now(zoneId).toString());
+        }
+    }
+
+    private static String normalizeCount(String number) {
+        String value = StringUtils.defaultIfBlank(number, "0").trim().toLowerCase();
+        try {
+            if (value.endsWith("k"))
+                return String.valueOf((int) (Double.parseDouble(value.substring(0, value.length() - 1)) * 1000));
+            if (value.endsWith("w"))
+                return String.valueOf((int) (Double.parseDouble(value.substring(0, value.length() - 1)) * 10000));
+            String digits = value.replaceAll("[^0-9]", "");
+            return StringUtils.defaultIfBlank(digits, "0");
+        } catch (NumberFormatException e) {
+            return "0";
+        }
+    }
+
+    private static int parseCount(String number) {
+        return Integer.parseInt(normalizeCount(number));
+    }
+
+    private static HashSet<String> readWhiteWords() {
+        HashSet<String> whiteWords = Utils.readFile("./white_words.txt");
+        whiteWords.removeIf(StringUtils::isBlank);
+        return whiteWords.stream().map(String::trim).collect(Collectors.toCollection(HashSet::new));
+    }
+
+    private static boolean titleContainsAnyWhiteWord(Zdm zdm, HashSet<String> whiteWords) {
+        String title = StringUtils.defaultString(zdm.getTitle()).toLowerCase();
+        return !StringUtils.isBlank(StreamUtils.findFirst(whiteWords, w -> title.contains(w.toLowerCase())));
+    }
+
     private static List<Zdm> processFilter(Collection<Zdm> zdms, int minVoted, int minComments, boolean detail) {
         //黑词过滤
         HashSet<String> blackWords = Utils.readFile("./black_words.txt");
         blackWords.removeIf(StringUtils::isBlank);
 
         //白词过滤内容
-        HashSet<String> whiteWords = Utils.readFile("./white_words.txt");
-        whiteWords.removeIf(StringUtils::isBlank);
+        HashSet<String> whiteWords = readWhiteWords();
 
         if (whiteWords.isEmpty()) {
             //如果白词文件为空，则使用原来的黑词模式
@@ -199,7 +331,7 @@ public class ZdmCrawler {
             //如果白词文件不为空，则启用新的白词模式，仅发送包含白名单中的商品优惠信息
             if (detail)
                 System.out.println("whiteWords is not empty, running in whiteWords mode. whiteWords list:\n" + String.join(",", whiteWords));
-            zdms = StreamUtils.filter(zdms, z -> !StringUtils.isBlank(StreamUtils.findFirst(whiteWords, w -> z.getTitle().contains(w))));
+            zdms = StreamUtils.filter(zdms, z -> titleContainsAnyWhiteWord(z, whiteWords));
         }
 
         //从数据库中取出已推送的优惠信息id
@@ -207,9 +339,9 @@ public class ZdmCrawler {
 
         //执行其他过滤规则
         List<Zdm> filtered = StreamUtils.filter(zdms, z ->
-                Integer.parseInt(z.getVoted()) > minVoted //值的数量
-                        && Integer.parseInt(z.getComments()) > minComments //评论的数量
-                        && !z.getPrice().contains("前") //不是前xxx名的耍猴抢购
+                parseCount(z.getVoted()) > minVoted //值的数量
+                        && parseCount(z.getComments()) > minComments //评论的数量
+                        && !StringUtils.defaultString(z.getPrice()).contains("前") //不是前xxx名的耍猴抢购
                         && !pushedIds.contains(z.getArticleId()) //不是已经推送过的
         );
 

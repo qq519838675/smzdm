@@ -95,6 +95,8 @@ jobs:
       env:
         #爬取数据时的最大翻页数量
         maxPageSize: 10
+        # 白名单关键词搜索页数. 白名单不为空时生效; 1 页约等于每个关键词最近 20 条搜索结果
+        searchPageSize: 1
         # 点值的数量>minVoted,才会被推送,填0为都推送
         minVoted: 8
         # 评论的数量>minComments,才会被推送,填0为都推送

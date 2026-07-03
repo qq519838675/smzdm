@@ -8,6 +8,7 @@
     <name>zdm</name>
     <properties>
         <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <repackage.classifier/>
     </properties>
     <dependencies>
@@ -81,6 +82,7 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
             <plugin>
