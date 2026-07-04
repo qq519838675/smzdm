@@ -77,6 +77,7 @@ public class ZdmCrawler {
                 searchPageSize = Integer.parseInt(envMap.getOrDefault("searchPageSize", "1")),
                 minVoted = Integer.parseInt(envMap.getOrDefault("minVoted", "0")),
                 minComments = Integer.parseInt(envMap.getOrDefault("minComments", "0")),
+                maxArticleAgeDays = Integer.parseInt(envMap.getOrDefault("maxArticleAgeDays", "3")),
                 minPushSize = Integer.parseInt(envMap.getOrDefault("MIN_PUSH_SIZE", "0"));
         boolean detail = "true".equals(envMap.getOrDefault("detail", "false"));
 
@@ -84,7 +85,7 @@ public class ZdmCrawler {
         Collection<Zdm> zdms = obtainUnpushedArticles(maxPageSize, searchPageSize);
 
         //根据各项规则执行过滤逻辑
-        zdms = processFilter(zdms, minVoted, minComments, detail);
+        zdms = processFilter(zdms, minVoted, minComments, maxArticleAgeDays, detail);
         System.out.println("过滤后剩余数据条数" + zdms.size());
 
         //在推送之前先入库数据,pushed字段默认为0(未推送)
@@ -314,7 +315,23 @@ public class ZdmCrawler {
         return !StringUtils.isBlank(StreamUtils.findFirst(whiteWords, w -> title.contains(w.toLowerCase())));
     }
 
-    private static List<Zdm> processFilter(Collection<Zdm> zdms, int minVoted, int minComments, boolean detail) {
+    private static boolean isRecentArticle(Zdm zdm, int maxArticleAgeDays) {
+        if (maxArticleAgeDays <= 0)
+            return true;
+
+        String articleTime = zdm.getArticle_time();
+        if (StringUtils.isBlank(articleTime))
+            return false;
+
+        try {
+            LocalDateTime publishedAt = LocalDateTime.parse(articleTime);
+            return !publishedAt.isBefore(LocalDateTime.now().minusDays(maxArticleAgeDays));
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private static List<Zdm> processFilter(Collection<Zdm> zdms, int minVoted, int minComments, int maxArticleAgeDays, boolean detail) {
         //黑词过滤
         HashSet<String> blackWords = Utils.readFile("./black_words.txt");
         blackWords.removeIf(StringUtils::isBlank);
@@ -342,6 +359,7 @@ public class ZdmCrawler {
                 parseCount(z.getVoted()) > minVoted //值的数量
                         && parseCount(z.getComments()) > minComments //评论的数量
                         && !StringUtils.defaultString(z.getPrice()).contains("前") //不是前xxx名的耍猴抢购
+                        && isRecentArticle(z, maxArticleAgeDays) //只保留最近N天发布的优惠信息
                         && !pushedIds.contains(z.getArticleId()) //不是已经推送过的
         );
 
