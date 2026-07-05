@@ -13,7 +13,7 @@ public interface Const {
             "https://faxian.smzdm.com/json_more?filter=h3s0t0f0c3&page=");
 
     //什么值得买搜索接口地址, keyword 和 offset 在代码中动态拼接
-    String ZDM_SEARCH_URL = "https://api.smzdm.com/v1/list?category_id=&brand_id=&mall_id=&order=hot&limit=20&keyword=%s&offset=%d";
+    String ZDM_SEARCH_URL = "https://api.smzdm.com/v1/list?category_id=&brand_id=&mall_id=&order=score&limit=20&keyword=%s&offset=%d";
     Integer ZDM_SEARCH_LIMIT = 20;
 
     //WxPusher极简推送模式的链接
