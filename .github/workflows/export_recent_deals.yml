@@ -1,0 +1,61 @@
+name: export_recent_deals
+
+on:
+  # GitHub Actions cron uses UTC. 13:05 UTC is 21:05 in Asia/Shanghai.
+  schedule:
+    - cron: "5 13 * * *"
+  workflow_dispatch:
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Restore the newest database snapshot produced by zdm_crawler. This is
+      # intentionally independent from the repository's committed database.db.
+      - name: Restore latest crawler database cache
+        uses: actions/cache/restore@v4
+        with:
+          path: database_old.db
+          key: ${{ runner.os }}-database_old-export-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-database_old-
+
+      - name: Verify crawler database cache
+        run: |
+          test -s database_old.db
+          sqlite3 database_old.db "SELECT COUNT(*) FROM ZDM;"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Export recent deals
+        run: python scripts/export_recent_deals.py --database database_old.db --output data/recent_deals.json
+
+      - name: Validate exported JSON
+        run: python -m json.tool data/recent_deals.json > /dev/null
+
+      - name: Check export changes
+        id: export_changes
+        run: |
+          if [ -n "$(git status --porcelain -- data/recent_deals.json)" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Git add export
+        if: steps.export_changes.outputs.changed == 'true'
+        run: git add data/recent_deals.json
+
+      - name: Commit and push export
+        if: steps.export_changes.outputs.changed == 'true'
+        uses: actions-go/push@master
+        with:
+          author-email: 'actions@github.com'
+          author-name: 'GitHub Actions'
+          commit-message: 'export recent deals'
+          token: ${{ secrets.GIT_TOKEN }}
