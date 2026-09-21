@@ -132,8 +132,7 @@ def export(database: Path, output: Path) -> int:
     }
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "
-", encoding="utf-8"
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     print(
         f"Exported {len(deals)} unique SMZDM deals published since "
