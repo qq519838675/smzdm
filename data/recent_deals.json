@@ -2,313 +2,214 @@
   "schema": "smzdm-recent-deals/v1",
   "timezone": "Asia/Shanghai",
   "window_hours": 24,
-  "count": 34,
+  "count": 23,
   "deals": [
-    {
-      "id": "185536270",
-      "title": "科尔沁 国产原切牛脖骨段 6斤",
-      "price": "74.9元（需用券）",
-      "url": "https://www.smzdm.com/p/185536270/",
-      "published_at": "2026-11-12T15:44:38+08:00",
-      "votes": 166,
-      "comments": 707
-    },
-    {
-      "id": "185994607",
-      "title": "88VIP：心相印 云感柔肤系列 有芯卷纸 120g*24卷",
-      "price": "13.53元（需用券）",
-      "url": "https://www.smzdm.com/p/185994607/",
-      "published_at": "2026-11-12T15:32:34+08:00",
-      "votes": 15,
-      "comments": 20
-    },
-    {
-      "id": "185836776",
-      "title": "88VIP：卫岗 3.2g蛋白质 纯牛奶 250ml*16盒",
-      "price": "15.49元（需用券）",
-      "url": "https://www.smzdm.com/p/185836776/",
-      "published_at": "2026-11-12T14:55:15+08:00",
-      "votes": 13,
-      "comments": 30
-    },
-    {
-      "id": "185999918",
-      "title": "未来星 臻选A2β酪蛋白+益生元未来星125ml*16包儿童牛奶好吸收7月产",
-      "price": "6.77元（需用券）",
-      "url": "https://www.smzdm.com/p/185999918/",
-      "published_at": "2026-11-12T14:38:56+08:00",
-      "votes": 18,
-      "comments": 28
-    },
-    {
-      "id": "185974083",
-      "title": "国家补贴、今日必买：苹果 iPhone 18 Pro 5G智能手机 256GB",
-      "price": "8346.26元",
-      "url": "https://www.smzdm.com/p/185974083/",
-      "published_at": "2026-11-12T14:26:07+08:00",
-      "votes": 45,
-      "comments": 130
-    },
-    {
-      "id": "185961666",
-      "title": "88VIP：洁柔 卫生纸高端艺术油画系列有芯卷纸加厚4层200g20卷装",
-      "price": "28.51元（需用券）",
-      "url": "https://www.smzdm.com/p/185961666/",
-      "published_at": "2026-11-12T14:02:11+08:00",
-      "votes": 15,
-      "comments": 29
-    },
-    {
-      "id": "185996897",
-      "title": "国家补贴、淘金币可用：苹果 iPhone 18 Pro 智能手机 256GB",
-      "price": "8194.02元",
-      "url": "https://www.smzdm.com/p/185996897/",
-      "published_at": "2026-11-12T13:43:12+08:00",
-      "votes": 66,
-      "comments": 110
-    },
-    {
-      "id": "185781562",
-      "title": "虎邦 味道绝了！ 香辣牛肉+麻辣牛肉+黑椒牛肉+虎皮蒜蓉+小米辣酱 130g*5瓶 包邮",
-      "price": "19.75元返11积分后",
-      "url": "https://www.smzdm.com/p/185781562/",
-      "published_at": "2026-11-12T13:32:34+08:00",
-      "votes": 60,
-      "comments": 145
-    },
-    {
-      "id": "185772195",
-      "title": "薇姿 绿标水润版1%二硫化硒洗发水200ml",
-      "price": "30.8元返50元超市卡，返42积分后",
-      "url": "https://www.smzdm.com/p/185772195/",
-      "published_at": "2026-11-12T12:19:42+08:00",
-      "votes": 101,
-      "comments": 177
-    },
-    {
-      "id": "185992118",
-      "title": "PLUS会员、今日必买：依视路 爱赞全晰眼镜片1.6钻晶膜 防蓝光 防紫外线 配镜片现片2片",
-      "price": "220.96元（需用券）",
-      "url": "https://www.smzdm.com/p/185992118/",
-      "published_at": "2026-11-12T11:52:19+08:00",
-      "votes": 10,
-      "comments": 39
-    },
-    {
-      "id": "185995598",
-      "title": "PLUS会员：蒙牛 新养道零乳糖牛奶全脂200ml×10包 送礼礼盒3.2g/100ml蛋白质",
-      "price": "12.76元（需买2件，需用券）",
-      "url": "https://www.smzdm.com/p/185995598/",
-      "published_at": "2026-11-12T11:50:22+08:00",
-      "votes": 16,
-      "comments": 9
-    },
-    {
-      "id": "185856293",
-      "title": "科尔沁 猫超臻选内蒙古风干牛肉干208g*1袋",
-      "price": "24.34元（需用券）",
-      "url": "https://www.smzdm.com/p/185856293/",
-      "published_at": "2026-11-12T11:45:18+08:00",
-      "votes": 61,
-      "comments": 91
-    },
-    {
-      "id": "185359063",
-      "title": "好丽友 薯愿小薯片 牛排口味 35.8克*5袋（可搭配）",
-      "price": "4.6元返20积分后",
-      "url": "https://www.smzdm.com/p/185359063/",
-      "published_at": "2026-11-12T11:43:07+08:00",
-      "votes": 160,
-      "comments": 258
-    },
-    {
-      "id": "185875043",
-      "title": "国家补贴、淘金币可用：苹果 iPhone 18 Pro Max 智能手机 256GB",
-      "price": "9545.3元",
-      "url": "https://www.smzdm.com/p/185875043/",
-      "published_at": "2026-11-12T11:26:30+08:00",
-      "votes": 31,
-      "comments": 70
-    },
-    {
-      "id": "185818564",
-      "title": "88VIP：伊利 金典鲜牛奶208ml*8+金典450ml*2组合装",
-      "price": "28元返20积分后",
-      "url": "https://www.smzdm.com/p/185818564/",
-      "published_at": "2026-11-12T10:45:42+08:00",
-      "votes": 16,
-      "comments": 32
-    },
     {
       "id": "185926190",
       "title": "88VIP：得宝 抽纸80抽15包",
       "price": "23.54元",
       "url": "https://www.smzdm.com/p/185926190/",
-      "published_at": "2026-11-12T10:41:34+08:00",
-      "votes": 32,
-      "comments": 17
-    },
-    {
-      "id": "185770467",
-      "title": "昆仑山 限时1.58元一瓶！天然雪山矿泉水500ml*24瓶/箱*5箱",
-      "price": "212.15元（需用券）",
-      "url": "https://www.smzdm.com/p/185770467/",
-      "published_at": "2026-11-12T10:36:13+08:00",
-      "votes": 10,
-      "comments": 8
-    },
-    {
-      "id": "185988379",
-      "title": "立白 大师香氛洗衣液11.6斤！格拉斯玫瑰香(无荧光剂)",
-      "price": "48.6元（需用券）",
-      "url": "https://www.smzdm.com/p/185988379/",
-      "published_at": "2026-11-12T10:31:18+08:00",
-      "votes": 16,
-      "comments": 21
-    },
-    {
-      "id": "185939916",
-      "title": "88VIP、今日必买：AXE 牌油柑白茶水光护肤洗洁精1kg*2速溶重油洁净升级",
-      "price": "13.3元（需用券）",
-      "url": "https://www.smzdm.com/p/185939916/",
-      "published_at": "2026-11-12T10:30:29+08:00",
-      "votes": 21,
-      "comments": 38
-    },
-    {
-      "id": "185921217",
-      "title": "心相印 茶语丝享系列 抽纸 S码 120抽*18包",
-      "price": "11.7元（需用券）",
-      "url": "https://www.smzdm.com/p/185921217/",
-      "published_at": "2026-11-12T10:24:19+08:00",
-      "votes": 37,
-      "comments": 42
-    },
-    {
-      "id": "185844687",
-      "title": "百岁山 天然矿泉水 348mL×24瓶/箱",
-      "price": "25.51元返15积分后",
-      "url": "https://www.smzdm.com/p/185844687/",
-      "published_at": "2026-11-12T10:22:33+08:00",
-      "votes": 15,
-      "comments": 45
-    },
-    {
-      "id": "185954233",
-      "title": "今日必买：AXE 柠檬护肤洗洁精1.18kg*2",
-      "price": "11.2元（需用券）",
-      "url": "https://www.smzdm.com/p/185954233/",
-      "published_at": "2026-11-12T10:20:10+08:00",
-      "votes": 69,
-      "comments": 116
-    },
-    {
-      "id": "185954331",
-      "title": "心相印 茶语丝享抽纸卫生纸24包×110抽",
-      "price": "13.78元",
-      "url": "https://www.smzdm.com/p/185954331/",
-      "published_at": "2026-11-12T10:19:14+08:00",
-      "votes": 25,
-      "comments": 97
-    },
-    {
-      "id": "185913912",
-      "title": "芒果TV 会员年卡+京东PLUS年卡",
-      "price": "101元返70积分后",
-      "url": "https://www.smzdm.com/p/185913912/",
-      "published_at": "2026-11-12T10:17:22+08:00",
-      "votes": 40,
-      "comments": 81
-    },
-    {
-      "id": "185581669",
-      "title": "今日必买：佳沛 新西兰 金奇异果特大果15粒134-146g猕猴桃水果礼盒",
-      "price": "75.09元（需用券）",
-      "url": "https://www.smzdm.com/p/185581669/",
-      "published_at": "2026-11-12T10:08:11+08:00",
-      "votes": 9,
-      "comments": 8
+      "published_at": "2026-11-13T15:21:23+08:00",
+      "votes": 43,
+      "comments": 27
     },
     {
       "id": "170440989",
       "title": "今日必买：美团闪购 时令水果专场 领59-20/69-25/99-30神券",
       "price": "",
       "url": "https://www.smzdm.com/p/170440989/",
-      "published_at": "2026-11-12T10:02:33+08:00",
+      "published_at": "2026-11-13T15:00:05+08:00",
       "votes": 21,
       "comments": 4
     },
     {
-      "id": "185725838",
-      "title": "淘金币可用、88VIP：婴元素 立白婴儿除螨除菌洗衣液 全家可用2L*4瓶",
-      "price": "33.41元正文更低价23.33元（需用券）",
-      "url": "https://www.smzdm.com/p/185725838/",
-      "published_at": "2026-11-12T10:01:25+08:00",
-      "votes": 34,
-      "comments": 28
+      "id": "185772195",
+      "title": "薇姿 绿标水润版1%二硫化硒洗发水200ml",
+      "price": "30.8元返50元超市卡，返42积分后",
+      "url": "https://www.smzdm.com/p/185772195/",
+      "published_at": "2026-11-13T13:19:33+08:00",
+      "votes": 134,
+      "comments": 224
     },
     {
-      "id": "185790047",
-      "title": "今日必买：佳农 东北水果甜玉米粒 80g*10包",
-      "price": "11.89元（需用券）",
-      "url": "https://www.smzdm.com/p/185790047/",
-      "published_at": "2026-11-12T09:50:28+08:00",
-      "votes": 43,
+      "id": "186069843",
+      "title": "88VIP、今日必买：特仑苏 早餐营养纯牛奶高端品质蛋白鲜奶奶纯奶早餐特仑苏250ml×16盒",
+      "price": "23.72元",
+      "url": "https://www.smzdm.com/p/186069843/",
+      "published_at": "2026-11-13T12:33:31+08:00",
+      "votes": 30,
+      "comments": 33
+    },
+    {
+      "id": "186066973",
+      "title": "桂格 即食冲饮纯燕麦片谷物 1.2kg",
+      "price": "4.8元（需用券）",
+      "url": "https://www.smzdm.com/p/186066973/",
+      "published_at": "2026-11-13T11:54:59+08:00",
+      "votes": 12,
+      "comments": 24
+    },
+    {
+      "id": "186063085",
+      "title": "今日必买：新希望 有机鲜牛奶巴氏杀菌冷藏鲜奶2L*2桶家庭分享早餐奶源头直发",
+      "price": "23.81元（需用券）",
+      "url": "https://www.smzdm.com/p/186063085/",
+      "published_at": "2026-11-13T11:53:00+08:00",
+      "votes": 12,
+      "comments": 4
+    },
+    {
+      "id": "185853921",
+      "title": "柴火大院 特等五常大米 原粮稻花香2号 核心产区双层真空装 5kg",
+      "price": "41.15元（需用券）",
+      "url": "https://www.smzdm.com/p/185853921/",
+      "published_at": "2026-11-13T11:49:07+08:00",
+      "votes": 245,
+      "comments": 271
+    },
+    {
+      "id": "186066786",
+      "title": "柴火大院 脱皮水果甜玉米粒 60g*10袋 去皮即食 早餐粗粮 杂粮礼盒",
+      "price": "7.25元（需买2件，需用券）",
+      "url": "https://www.smzdm.com/p/186066786/",
+      "published_at": "2026-11-13T11:17:37+08:00",
+      "votes": 28,
+      "comments": 9
+    },
+    {
+      "id": "186035193",
+      "title": "88VIP：五稻田 稻香贡米东北大米5kg真空装",
+      "price": "14.67元（需用券）",
+      "url": "https://www.smzdm.com/p/186035193/",
+      "published_at": "2026-11-13T11:11:23+08:00",
+      "votes": 51,
+      "comments": 115
+    },
+    {
+      "id": "186060876",
+      "title": "今日必买：圣牧 有机纯牛奶200ml*20盒",
+      "price": "20.76元",
+      "url": "https://www.smzdm.com/p/186060876/",
+      "published_at": "2026-11-13T11:06:18+08:00",
+      "votes": 16,
+      "comments": 21
+    },
+    {
+      "id": "186056806",
+      "title": "金典 伊利金典纯牛奶250ml*24盒 9月产",
+      "price": "33.63元",
+      "url": "https://www.smzdm.com/p/186056806/",
+      "published_at": "2026-11-13T10:33:50+08:00",
+      "votes": 24,
+      "comments": 47
+    },
+    {
+      "id": "185995185",
+      "title": "88VIP、今日必买：绿行者 新鲜牛奶芋头 软糯香甜款 2250克 整箱装",
+      "price": "13.88元（需用券）",
+      "url": "https://www.smzdm.com/p/185995185/",
+      "published_at": "2026-11-13T10:31:35+08:00",
+      "votes": 11,
+      "comments": 42
+    },
+    {
+      "id": "185913912",
+      "title": "芒果TV 会员年卡+京东PLUS年卡",
+      "price": "101元返70积分后",
+      "url": "https://www.smzdm.com/p/185913912/",
+      "published_at": "2026-11-13T10:19:30+08:00",
+      "votes": 51,
+      "comments": 100
+    },
+    {
+      "id": "186038349",
+      "title": "限地区、PLUS会员：幸福阳光 抽纸 舒芽3层100抽*30包超值装",
+      "price": "10.5元（需买6件，需用券）",
+      "url": "https://www.smzdm.com/p/186038349/",
+      "published_at": "2026-11-13T10:18:20+08:00",
+      "votes": 26,
+      "comments": 103
+    },
+    {
+      "id": "186056451",
+      "title": "今日必买：得宝 无香抽纸 4层加厚80抽*18包 整箱装",
+      "price": "21.22元（需买3件，需用券）",
+      "url": "https://www.smzdm.com/p/186056451/",
+      "published_at": "2026-11-13T10:12:34+08:00",
+      "votes": 10,
       "comments": 29
     },
     {
-      "id": "185461873",
-      "title": "今日必买：苹果 Mac Mini（M6、24GB、512GB） 台式机",
-      "price": "7224.15元",
-      "url": "https://www.smzdm.com/p/185461873/",
-      "published_at": "2026-11-12T09:30:59+08:00",
-      "votes": 9,
-      "comments": 71
+      "id": "185844687",
+      "title": "百岁山 天然矿泉水 348mL×24瓶/箱",
+      "price": "25.51元返15积分后",
+      "url": "https://www.smzdm.com/p/185844687/",
+      "published_at": "2026-11-13T10:06:52+08:00",
+      "votes": 18,
+      "comments": 51
     },
     {
-      "id": "185882738",
-      "title": "教育优惠：苹果 MacBookPro 16英寸（M4Pro(14+20核) 、24GB、512GB） 笔记本电脑",
-      "price": "11599元（需用券）",
-      "url": "https://www.smzdm.com/p/185882738/",
-      "published_at": "2026-11-12T09:29:59+08:00",
-      "votes": 76,
-      "comments": 97
+      "id": "186055931",
+      "title": "今日必买：十月稻田 七色糙米 5斤 糙米 黑米 燕麦 五谷杂粮米 粗粮 大米伴侣 2.5kg",
+      "price": "10元（需买4件，需用券）",
+      "url": "https://www.smzdm.com/p/186055931/",
+      "published_at": "2026-11-13T10:04:38+08:00",
+      "votes": 18,
+      "comments": 9
     },
     {
-      "id": "184274251",
-      "title": "国家补贴：苹果 iPad 2025款 11英寸平板电脑 128GB",
-      "price": "2798元",
-      "url": "https://www.smzdm.com/p/184274251/",
-      "published_at": "2026-11-12T09:27:39+08:00",
-      "votes": 9,
-      "comments": 36
+      "id": "185941479",
+      "title": "88VIP：狮王 儿童牙膏草莓葡萄蜜柑 50g*3支",
+      "price": "12.44元（需用券）",
+      "url": "https://www.smzdm.com/p/185941479/",
+      "published_at": "2026-11-13T10:00:58+08:00",
+      "votes": 10,
+      "comments": 3
     },
     {
-      "id": "184809836",
-      "title": "教育优惠：苹果 MacBook Air 2026款 13英寸笔记本（M5、16GB、512GB）",
-      "price": "6797.84元（需用券）",
-      "url": "https://www.smzdm.com/p/184809836/",
-      "published_at": "2026-11-12T09:26:58+08:00",
-      "votes": 15,
-      "comments": 78
+      "id": "186007196",
+      "title": "今日必买：妙可蓝多 水果味奶酪棒 500克/25支装",
+      "price": "20.91元（需买3件，需用券）",
+      "url": "https://www.smzdm.com/p/186007196/",
+      "published_at": "2026-11-13T10:00:40+08:00",
+      "votes": 36,
+      "comments": 43
     },
     {
-      "id": "185988229",
-      "title": "力士 幽莲魅肤香氛沐浴露 霓光墨兰香2斤装/1kg（三种可选）",
-      "price": "16.2元（需买2件，需用券）",
-      "url": "https://www.smzdm.com/p/185988229/",
-      "published_at": "2026-11-12T09:24:05+08:00",
-      "votes": 20,
-      "comments": 37
+      "id": "186036220",
+      "title": "88VIP：特仑苏 早餐营养纯牛奶高端品质蛋白鲜奶奶纯奶早餐特仑苏250ml×16盒",
+      "price": "19.78元",
+      "url": "https://www.smzdm.com/p/186036220/",
+      "published_at": "2026-11-13T09:52:10+08:00",
+      "votes": 14,
+      "comments": 33
     },
     {
-      "id": "185747861",
-      "title": "今日必买、88VIP：康师傅 特别特烧汁雪花牛肉面 1桶装",
-      "price": "2.47元",
-      "url": "https://www.smzdm.com/p/185747861/",
-      "published_at": "2026-11-12T07:49:39+08:00",
-      "votes": 23,
-      "comments": 58
+      "id": "186052771",
+      "title": "今日必买：白象 黑猪肉荠菜水饺 720g/36只",
+      "price": "7.48元（需买4件，需用券）",
+      "url": "https://www.smzdm.com/p/186052771/",
+      "published_at": "2026-11-13T09:26:42+08:00",
+      "votes": 16,
+      "comments": 7
+    },
+    {
+      "id": "186053808",
+      "title": "百亿补贴：酷态科 手机数据线苹果MFi认证PD快充Lightning充电线适用苹果8-14",
+      "price": "23.6元（需用券）",
+      "url": "https://www.smzdm.com/p/186053808/",
+      "published_at": "2026-11-13T09:10:12+08:00",
+      "votes": 14,
+      "comments": 327
+    },
+    {
+      "id": "185536270",
+      "title": "科尔沁 国产原切牛脖骨段 6斤",
+      "price": "74.9元（需用券）",
+      "url": "https://www.smzdm.com/p/185536270/",
+      "published_at": "2026-11-13T08:53:26+08:00",
+      "votes": 198,
+      "comments": 903
     }
   ]
 }
