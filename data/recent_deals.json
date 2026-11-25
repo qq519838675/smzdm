@@ -2,367 +2,394 @@
   "schema": "smzdm-recent-deals/v1",
   "timezone": "Asia/Shanghai",
   "window_hours": 24,
-  "count": 40,
+  "count": 43,
   "deals": [
     {
-      "id": "186683589",
-      "title": "今日必买：百菲酪 菠萝/金桔风味水牛奶调制乳多口味百菲酪200ml*10盒",
-      "price": "13.14元（需买2件，需用券）",
-      "url": "https://www.smzdm.com/p/186683589/",
-      "published_at": "2026-11-24T17:31:59+08:00",
-      "votes": 28,
-      "comments": 49
+      "id": "186632184",
+      "title": "百亿补贴：洁柔 2000g无芯卷纸1提14卷柔韧卫生纸4层加厚家用卫生纸厕纸卷纸",
+      "price": "12.9元",
+      "url": "https://www.smzdm.com/p/186632184/",
+      "published_at": "2026-11-25T17:15:26+08:00",
+      "votes": 9,
+      "comments": 39
     },
     {
-      "id": "186698182",
-      "title": "果迎鲜 洛川红富士2026年新苹果 5斤彩箱装（大果75-80mm）",
-      "price": "16.4元",
-      "url": "https://www.smzdm.com/p/186698182/",
-      "published_at": "2026-11-24T15:53:09+08:00",
-      "votes": 10,
-      "comments": 11
-    },
-    {
-      "id": "186696188",
-      "title": "88VIP：十月稻田 五常大米5kg*2东北大米一年一季真空装",
-      "price": "66.28元（淘金币到手60.4元）",
-      "url": "https://www.smzdm.com/p/186696188/",
-      "published_at": "2026-11-24T15:17:33+08:00",
-      "votes": 10,
-      "comments": 3
-    },
-    {
-      "id": "186689943",
-      "title": "88VIP、今日必买：舒化 伊利舒化无乳糖高钙牛奶220ml*24盒/整箱0乳糖",
-      "price": "42.42元",
-      "url": "https://www.smzdm.com/p/186689943/",
-      "published_at": "2026-11-24T15:11:54+08:00",
-      "votes": 12,
-      "comments": 5
-    },
-    {
-      "id": "186686910",
-      "title": "国家补贴：苹果 iPhone 17 5G双卡双待手机 白色 256GB",
-      "price": "4970.51元（需用券）",
-      "url": "https://www.smzdm.com/p/186686910/",
-      "published_at": "2026-11-24T15:08:07+08:00",
-      "votes": 18,
-      "comments": 27
+      "id": "186689258",
+      "title": "随机免单：蔡司 1.67佳锐冰蓝膜树脂镜片*2+9051黑银超轻钛架多款可选（可升级FILA斐乐镜架/施洛华镜架）BYZ",
+      "price": "359.33元返400积分后",
+      "url": "https://www.smzdm.com/p/186689258/",
+      "published_at": "2026-11-25T17:10:05+08:00",
+      "votes": 34,
+      "comments": 29
     },
     {
       "id": "186689381",
-      "title": "凯米 U6系列1.67超薄防蓝光镜片（0-800度）+9051黑银超轻钛架多款可选（可升级FILA斐乐镜架/施洛华镜架)TK1",
+      "title": "随机免单：凯米 U6系列1.67超薄防蓝光镜片（0-800度）+9051黑银超轻钛架多款可选（可升级FILA斐乐镜架/施洛华镜架)TK1",
       "price": "112.28元",
       "url": "https://www.smzdm.com/p/186689381/",
-      "published_at": "2026-11-24T15:03:51+08:00",
+      "published_at": "2026-11-25T16:15:36+08:00",
+      "votes": 79,
+      "comments": 58
+    },
+    {
+      "id": "186689306",
+      "title": "随机免单：万新 1.56非球面树脂镜片+56118透蓝色超轻钛架多款可选（来架免费加工）",
+      "price": "49.42元返80积分后",
+      "url": "https://www.smzdm.com/p/186689306/",
+      "published_at": "2026-11-25T16:11:51+08:00",
+      "votes": 62,
+      "comments": 47
+    },
+    {
+      "id": "186689358",
+      "title": "随机免单：凯米 1.74薄非球面树脂镜片（高度数更显薄）+9051黑银超轻钛架多款可选（可升级FILA斐乐镜架/施洛华镜架）TK1",
+      "price": "188.67元返210积分后",
+      "url": "https://www.smzdm.com/p/186689358/",
+      "published_at": "2026-11-25T16:08:50+08:00",
+      "votes": 44,
+      "comments": 34
+    },
+    {
+      "id": "186707704",
+      "title": "金龙鱼 臻选软香稻5KG*4袋共20公斤整箱装 苏北大米 香软绵糯",
+      "price": "54.9元淘金币到手53.61元",
+      "url": "https://www.smzdm.com/p/186707704/",
+      "published_at": "2026-11-25T16:06:42+08:00",
+      "votes": 49,
+      "comments": 107
+    },
+    {
+      "id": "186707481",
+      "title": "金龙鱼 金玉稻香 五常大米 5kg",
+      "price": "21.93元淘金币到手19.53元",
+      "url": "https://www.smzdm.com/p/186707481/",
+      "published_at": "2026-11-25T16:06:06+08:00",
+      "votes": 57,
+      "comments": 55
+    },
+    {
+      "id": "186755683",
+      "title": "京鲜生 丹东99红颜奶油草莓净重1.8斤单果15g+（新季上市）",
+      "price": "49.99元",
+      "url": "https://www.smzdm.com/p/186755683/",
+      "published_at": "2026-11-25T15:35:34+08:00",
+      "votes": 22,
+      "comments": 9
+    },
+    {
+      "id": "186615522",
+      "title": "今日必买：农夫山泉 长白山天然矿泉水400ml*24瓶运动盖单手开盖倒瓶不洒",
+      "price": "26.92元",
+      "url": "https://www.smzdm.com/p/186615522/",
+      "published_at": "2026-11-25T15:32:16+08:00",
+      "votes": 23,
+      "comments": 26
+    },
+    {
+      "id": "186732515",
+      "title": "维达 有芯卷纸棉韧4层130克*20卷",
+      "price": "12.9元（需买3件，需用券）",
+      "url": "https://www.smzdm.com/p/186732515/",
+      "published_at": "2026-11-25T15:06:19+08:00",
       "votes": 10,
-      "comments": 5
-    },
-    {
-      "id": "186566781",
-      "title": "今日必买：传化 洗洁精大桶1.31kg柠檬去油酒店商用餐饮",
-      "price": "4.78元",
-      "url": "https://www.smzdm.com/p/186566781/",
-      "published_at": "2026-11-24T14:50:43+08:00",
-      "votes": 31,
-      "comments": 32
-    },
-    {
-      "id": "186403237",
-      "title": "科尔沁 风干牛肉干 原味 400g",
-      "price": "56元返30值得买积分后",
-      "url": "https://www.smzdm.com/p/186403237/",
-      "published_at": "2026-11-24T14:28:48+08:00",
-      "votes": 220,
-      "comments": 401
+      "comments": 12
     },
     {
       "id": "186680506",
       "title": "今日必买：涝河桥 供港宁夏滩羊 原切小腿切块3斤（不含拐筋）",
       "price": "79.99元（需用券）",
       "url": "https://www.smzdm.com/p/186680506/",
-      "published_at": "2026-11-24T14:18:16+08:00",
-      "votes": 28,
-      "comments": 43
+      "published_at": "2026-11-25T15:01:52+08:00",
+      "votes": 71,
+      "comments": 298
     },
     {
-      "id": "186678512",
-      "title": "英氏 婴儿柔护酵素洗衣液800ml*1瓶+500ml*2袋补充装",
-      "price": "34.84元（需用券）",
-      "url": "https://www.smzdm.com/p/186678512/",
-      "published_at": "2026-11-24T14:14:30+08:00",
-      "votes": 16,
-      "comments": 6
+      "id": "186634895",
+      "title": "狮王 齿力佳防蛀儿童含氟牙膏 蜜柑味 50g*1支（可搭配）",
+      "price": "5.15元（需买4件，需用券）",
+      "url": "https://www.smzdm.com/p/186634895/",
+      "published_at": "2026-11-25T14:29:14+08:00",
+      "votes": 10,
+      "comments": 19
     },
     {
-      "id": "186546582",
-      "title": "26.45元/箱：蒙牛 全脂纯牛奶200ml×24盒*2箱",
-      "price": "52.9元返40值得买积分后",
-      "url": "https://www.smzdm.com/p/186546582/",
-      "published_at": "2026-11-24T13:59:08+08:00",
-      "votes": 9,
-      "comments": 11
+      "id": "186145919",
+      "title": "百亿补贴：佳农 泰国金枕冷冻榴莲肉450g/袋 2袋装共900g 畅享装",
+      "price": "69.86元",
+      "url": "https://www.smzdm.com/p/186145919/",
+      "published_at": "2026-11-25T13:47:29+08:00",
+      "votes": 32,
+      "comments": 786
+    },
+    {
+      "id": "186677460",
+      "title": "斑布 原生竹浆抽纸 3层90抽×72包",
+      "price": "59.9元（需用券）",
+      "url": "https://www.smzdm.com/p/186677460/",
+      "published_at": "2026-11-25T13:43:19+08:00",
+      "votes": 14,
+      "comments": 5
     },
     {
       "id": "186633485",
       "title": "科尔沁 猫超臻选超干风干牛肉干100g",
       "price": "19.72元（需用券）",
       "url": "https://www.smzdm.com/p/186633485/",
-      "published_at": "2026-11-24T13:42:46+08:00",
-      "votes": 12,
-      "comments": 22
+      "published_at": "2026-11-25T12:29:26+08:00",
+      "votes": 18,
+      "comments": 25
     },
     {
       "id": "186610342",
       "title": "科尔沁 风干牛肉干 原味  400g",
       "price": "59元",
       "url": "https://www.smzdm.com/p/186610342/",
-      "published_at": "2026-11-24T13:41:50+08:00",
+      "published_at": "2026-11-25T12:28:41+08:00",
       "votes": 12,
-      "comments": 36
+      "comments": 62
     },
     {
-      "id": "186676599",
-      "title": "京觅 贵州威宁丑苹果 12枚装单果70-80mm约4.6-4.8斤",
-      "price": "19.7元",
-      "url": "https://www.smzdm.com/p/186676599/",
-      "published_at": "2026-11-24T13:29:13+08:00",
-      "votes": 12,
-      "comments": 17
-    },
-    {
-      "id": "186686640",
-      "title": "88VIP、今日必买：农夫山泉 长白山天然矿泉水380ml*15瓶*2箱",
-      "price": "26.35元（需用券）",
-      "url": "https://www.smzdm.com/p/186686640/",
-      "published_at": "2026-11-24T12:59:02+08:00",
+      "id": "186632503",
+      "title": "88VIP、今日必买：科尔沁 手撕牛肉干250g",
+      "price": "32.69元（需用券）",
+      "url": "https://www.smzdm.com/p/186632503/",
+      "published_at": "2026-11-25T12:28:29+08:00",
       "votes": 10,
-      "comments": 7
+      "comments": 9
     },
     {
-      "id": "186686780",
-      "title": "88VIP、今日必买：新养道 零乳糖牛奶全脂型全脂调制乳利乐钻200ml×10包",
-      "price": "13.09元",
-      "url": "https://www.smzdm.com/p/186686780/",
-      "published_at": "2026-11-24T12:05:27+08:00",
+      "id": "186743596",
+      "title": "伊利 猫超臻选抹茶牛乳125ml*20整箱伊利臻浓牛奶早餐奶8月产",
+      "price": "9.49元",
+      "url": "https://www.smzdm.com/p/186743596/",
+      "published_at": "2026-11-25T12:26:37+08:00",
       "votes": 16,
-      "comments": 14
+      "comments": 25
     },
     {
-      "id": "186684183",
-      "title": "今日必买：贯池 早餐面点 门钉牛肉饼300g 约5个（任选10件）",
-      "price": "3.99元（需买10件，需用券）",
-      "url": "https://www.smzdm.com/p/186684183/",
-      "published_at": "2026-11-24T11:36:50+08:00",
-      "votes": 10,
-      "comments": 18
-    },
-    {
-      "id": "186683503",
-      "title": "今日必买：京觅 力度升级、再降10元：特大号云南花香蓝莓（单果22mm+）12盒",
-      "price": "99.9元",
-      "url": "https://www.smzdm.com/p/186683503/",
-      "published_at": "2026-11-24T11:32:32+08:00",
-      "votes": 42,
-      "comments": 49
-    },
-    {
-      "id": "186450410",
-      "title": "百亿补贴、今日必买：佳农 智利进口车厘子2J金标特级 5斤礼盒装",
-      "price": "102.2元",
-      "url": "https://www.smzdm.com/p/186450410/",
-      "published_at": "2026-11-24T11:06:46+08:00",
-      "votes": 256,
-      "comments": 12506
-    },
-    {
-      "id": "186681104",
-      "title": "鲜京采 X七鲜私厨羊肉韭菜水饺400g/20只北方水饺地道羊肉早餐主食",
-      "price": "9.98元",
-      "url": "https://www.smzdm.com/p/186681104/",
-      "published_at": "2026-11-24T10:55:29+08:00",
-      "votes": 10,
+      "id": "186743480",
+      "title": "昆仑山 饮用天然雪山矿泉水 含锶弱碱性 1.5L*6瓶",
+      "price": "19.03元返36值得买积分后",
+      "url": "https://www.smzdm.com/p/186743480/",
+      "published_at": "2026-11-25T12:19:49+08:00",
+      "votes": 12,
       "comments": 12
     },
     {
-      "id": "186680434",
-      "title": "今日必买：思念 猪肉大葱水饺 2kg（约121只）",
-      "price": "16.9元（需买3件，需用券）",
-      "url": "https://www.smzdm.com/p/186680434/",
-      "published_at": "2026-11-24T10:51:51+08:00",
-      "votes": 14,
-      "comments": 17
-    },
-    {
-      "id": "186345260",
-      "title": "今日必买：京觅 大号德昌奶油草莓（单果18g+） 2.4斤（300g*4盒）",
-      "price": "55.9元",
-      "url": "https://www.smzdm.com/p/186345260/",
-      "published_at": "2026-11-24T10:38:24+08:00",
-      "votes": 305,
-      "comments": 1300
-    },
-    {
-      "id": "186676472",
-      "title": "蔡司视特耐 1.67超薄非球面树脂镜片*2片+9051黑金超轻钛架多款可选（可升级FILA斐乐镜架/施洛华镜架）TK1",
-      "price": "279.09元（评论+下单送擦拭纸一盒）",
-      "url": "https://www.smzdm.com/p/186676472/",
-      "published_at": "2026-11-24T10:08:11+08:00",
-      "votes": 16,
-      "comments": 11
-    },
-    {
-      "id": "186676395",
-      "title": "安慕斯 积雪草湿巾80抽1包",
-      "price": "2.99元",
-      "url": "https://www.smzdm.com/p/186676395/",
-      "published_at": "2026-11-24T10:07:29+08:00",
+      "id": "186743418",
+      "title": "今日必买：昆仑山 矿泉水 饮用天然弱碱性 500ml*24瓶",
+      "price": "32.05元返35值得买积分后",
+      "url": "https://www.smzdm.com/p/186743418/",
+      "published_at": "2026-11-25T12:18:58+08:00",
       "votes": 10,
-      "comments": 4
+      "comments": 6
     },
     {
-      "id": "170440989",
-      "title": "今日必买：美团闪购 时令水果专场 领59-20/69-25/99-30神券",
-      "price": "",
-      "url": "https://www.smzdm.com/p/170440989/",
-      "published_at": "2026-11-24T10:01:45+08:00",
-      "votes": 21,
-      "comments": 4
-    },
-    {
-      "id": "186675085",
-      "title": "今日必买：图拉斯 Yoga苹果18充电器iphone17promax充电头16氮化镓插头 35W伸缩线 70cm",
-      "price": "68元",
-      "url": "https://www.smzdm.com/p/186675085/",
-      "published_at": "2026-11-24T09:52:59+08:00",
-      "votes": 10,
-      "comments": 21
-    },
-    {
-      "id": "186674666",
-      "title": "PLUS会员：舒化 伊利 舒化 脱脂型0乳糖牛奶220ml*24盒*2箱",
-      "price": "83.15元返40值得买积分后",
-      "url": "https://www.smzdm.com/p/186674666/",
-      "published_at": "2026-11-24T09:43:34+08:00",
-      "votes": 12,
-      "comments": 20
-    },
-    {
-      "id": "186674555",
-      "title": "舒化 伊利 舒化奶 全脂型 无乳糖盒装220ml 48盒",
-      "price": "83.16元返40值得买积分后",
-      "url": "https://www.smzdm.com/p/186674555/",
-      "published_at": "2026-11-24T09:40:42+08:00",
+      "id": "186604715",
+      "title": "e洁 抽绳式垃圾袋 1.3丝 60只",
+      "price": "5.9元",
+      "url": "https://www.smzdm.com/p/186604715/",
+      "published_at": "2026-11-25T12:07:05+08:00",
       "votes": 20,
-      "comments": 28
+      "comments": 27
     },
     {
-      "id": "186454255",
-      "title": "折29.9元/箱：特仑苏 纯牛奶 250mL*16瓶*3箱9-11月",
-      "price": "89.7元返40值得买积分后",
-      "url": "https://www.smzdm.com/p/186454255/",
-      "published_at": "2026-11-24T09:40:06+08:00",
-      "votes": 377,
-      "comments": 573
+      "id": "186357804",
+      "title": "真心 黄桃水果罐头 玻璃瓶家庭零食 黄桃 880g*2罐",
+      "price": "16.99元返20积分后",
+      "url": "https://www.smzdm.com/p/186357804/",
+      "published_at": "2026-11-25T11:49:47+08:00",
+      "votes": 90,
+      "comments": 130
+    },
+    {
+      "id": "186683306",
+      "title": "今日必买：金达日美 不锈钢双头多功能折叠水果刀+叉子",
+      "price": "10.93元（需用券）",
+      "url": "https://www.smzdm.com/p/186683306/",
+      "published_at": "2026-11-25T10:57:09+08:00",
+      "votes": 11,
+      "comments": 9
+    },
+    {
+      "id": "186735937",
+      "title": "京觅 云南牛奶释迦果番荔枝净重4.5斤单果250g+老树佛头果",
+      "price": "49.98元",
+      "url": "https://www.smzdm.com/p/186735937/",
+      "published_at": "2026-11-25T10:38:21+08:00",
+      "votes": 20,
+      "comments": 13
+    },
+    {
+      "id": "186732683",
+      "title": "今日必买：阿克苏苹果 新疆阿克苏冰糖心 10斤一级果 单果70-80mm 净重8.5斤！",
+      "price": "28.79元（需用券）",
+      "url": "https://www.smzdm.com/p/186732683/",
+      "published_at": "2026-11-25T10:34:47+08:00",
+      "votes": 12,
+      "comments": 25
     },
     {
       "id": "186469121",
       "title": "今日必买：Shapetime 鲜牛奶 5.0蛋白高钙低脂 200ml*9瓶 整箱装",
       "price": "29.9元淘金币到手20.89元",
       "url": "https://www.smzdm.com/p/186469121/",
-      "published_at": "2026-11-24T09:39:54+08:00",
+      "published_at": "2026-11-25T10:34:43+08:00",
       "votes": 19,
-      "comments": 43
+      "comments": 44
+    },
+    {
+      "id": "186735294",
+      "title": "鲜京采 澳洲谷饲上脑牛排 2.5cm厚切 1kg",
+      "price": "108.9元",
+      "url": "https://www.smzdm.com/p/186735294/",
+      "published_at": "2026-11-25T10:23:20+08:00",
+      "votes": 26,
+      "comments": 18
     },
     {
       "id": "186615588",
       "title": "今日必买：Oarmilk 低温酸奶 草莓蜜桃低温奶 420g 买4赠80g*3杯",
       "price": "13元返40值得买积分后",
       "url": "https://www.smzdm.com/p/186615588/",
-      "published_at": "2026-11-24T09:38:16+08:00",
-      "votes": 33,
-      "comments": 53
+      "published_at": "2026-11-25T10:13:17+08:00",
+      "votes": 50,
+      "comments": 78
     },
     {
       "id": "186617504",
       "title": "伊利 金典鲜牛奶 3.8g乳蛋白208ml*6瓶 Q萌小鲜瓶 巴氏杀菌低温牛奶",
       "price": "16.95元返30值得买积分后",
       "url": "https://www.smzdm.com/p/186617504/",
-      "published_at": "2026-11-24T09:38:04+08:00",
-      "votes": 19,
-      "comments": 16
+      "published_at": "2026-11-25T10:13:05+08:00",
+      "votes": 29,
+      "comments": 33
     },
     {
       "id": "186606801",
       "title": "29.9元/箱：特仑苏 纯牛奶 250mL*16瓶*3箱 新日期",
       "price": "89.7元返40值得买积分后",
       "url": "https://www.smzdm.com/p/186606801/",
-      "published_at": "2026-11-24T09:37:52+08:00",
-      "votes": 104,
-      "comments": 152
+      "published_at": "2026-11-25T10:12:53+08:00",
+      "votes": 107,
+      "comments": 178
     },
     {
       "id": "186614196",
       "title": "百菲酪 3.8g蛋白 水牛纯牛奶 200ml*10盒*3箱",
       "price": "68.5元返60值得买积分后",
       "url": "https://www.smzdm.com/p/186614196/",
-      "published_at": "2026-11-24T09:37:39+08:00",
-      "votes": 84,
-      "comments": 150
+      "published_at": "2026-11-25T10:12:41+08:00",
+      "votes": 130,
+      "comments": 229
     },
     {
-      "id": "186653945",
-      "title": "88VIP：认养一头牛 高钙纯牛奶4.0g蛋白200ml*18盒整箱儿童早餐奶送礼8月",
-      "price": "27.61元",
-      "url": "https://www.smzdm.com/p/186653945/",
-      "published_at": "2026-11-24T09:37:24+08:00",
-      "votes": 20,
-      "comments": 24
+      "id": "170440989",
+      "title": "今日必买：美团闪购 时令水果专场 领59-20/69-25/99-30神券",
+      "price": "",
+      "url": "https://www.smzdm.com/p/170440989/",
+      "published_at": "2026-11-25T10:10:14+08:00",
+      "votes": 21,
+      "comments": 4
+    },
+    {
+      "id": "186701775",
+      "title": "京觅 江西赣南脐橙 橙子9斤净重铂金果170g+赣州甜橙新鲜水果源头直发",
+      "price": "23.8元（需用券）",
+      "url": "https://www.smzdm.com/p/186701775/",
+      "published_at": "2026-11-25T10:03:44+08:00",
+      "votes": 17,
+      "comments": 33
+    },
+    {
+      "id": "186683503",
+      "title": "今日必买：京觅 力度升级、再降10元：特大号云南花香蓝莓（单果22mm+）12盒",
+      "price": "99.9元",
+      "url": "https://www.smzdm.com/p/186683503/",
+      "published_at": "2026-11-25T10:03:33+08:00",
+      "votes": 73,
+      "comments": 217
+    },
+    {
+      "id": "186681104",
+      "title": "今日必买：鲜京采 X七鲜私厨羊肉韭菜水饺400g/20只北方水饺地道羊肉早餐主食",
+      "price": "9.98元",
+      "url": "https://www.smzdm.com/p/186681104/",
+      "published_at": "2026-11-25T10:03:22+08:00",
+      "votes": 18,
+      "comments": 19
     },
     {
       "id": "186501203",
       "title": "京鲜生 &柿一家 山东串收樱桃番茄123g*4条绿色食品水果小柿子源头直发",
       "price": "16.91元",
       "url": "https://www.smzdm.com/p/186501203/",
-      "published_at": "2026-11-24T08:50:53+08:00",
+      "published_at": "2026-11-25T10:01:27+08:00",
       "votes": 50,
-      "comments": 93
+      "comments": 94
     },
     {
-      "id": "186282980",
-      "title": "京觅 大号贵州修文绿心猕猴桃24枚（单果90g+）礼盒装",
-      "price": "24.9元",
-      "url": "https://www.smzdm.com/p/186282980/",
-      "published_at": "2026-11-24T08:50:29+08:00",
-      "votes": 117,
-      "comments": 466
+      "id": "186676599",
+      "title": "京觅 贵州威宁丑苹果 12枚装单果70-80mm约4.6-4.8斤",
+      "price": "19.7元",
+      "url": "https://www.smzdm.com/p/186676599/",
+      "published_at": "2026-11-25T10:00:47+08:00",
+      "votes": 24,
+      "comments": 37
     },
     {
-      "id": "186669846",
-      "title": "今日必买：奥妙 全自动第4代酵素升级配方洗衣液12斤",
-      "price": "36.9元（需用券）",
-      "url": "https://www.smzdm.com/p/186669846/",
-      "published_at": "2026-11-24T08:39:25+08:00",
+      "id": "186695751",
+      "title": "新果上市、大号款！：京觅 四川大凉山德昌奶油草莓 2.4斤300g*4盒 单果23g+ 源头直发包邮",
+      "price": "65.99元（需用券）",
+      "url": "https://www.smzdm.com/p/186695751/",
+      "published_at": "2026-11-25T10:00:35+08:00",
+      "votes": 20,
+      "comments": 80
+    },
+    {
+      "id": "186454255",
+      "title": "折29.9元/箱：特仑苏 纯牛奶 250mL*16瓶*3箱9-11月",
+      "price": "89.7元返40值得买积分后",
+      "url": "https://www.smzdm.com/p/186454255/",
+      "published_at": "2026-11-25T09:56:56+08:00",
+      "votes": 408,
+      "comments": 624
+    },
+    {
+      "id": "186674555",
+      "title": "舒化 伊利 舒化奶 全脂型 无乳糖盒装220ml 48盒",
+      "price": "87.16元",
+      "url": "https://www.smzdm.com/p/186674555/",
+      "published_at": "2026-11-25T09:54:26+08:00",
+      "votes": 24,
+      "comments": 35
+    },
+    {
+      "id": "186674666",
+      "title": "PLUS会员：舒化 伊利 舒化 脱脂型0乳糖牛奶220ml*24盒*2箱",
+      "price": "87.15元",
+      "url": "https://www.smzdm.com/p/186674666/",
+      "published_at": "2026-11-25T09:54:22+08:00",
       "votes": 12,
-      "comments": 14
+      "comments": 21
     },
     {
-      "id": "186546509",
-      "title": "今日必买：云南白药 清新口气牙膏 留兰香型 180g*2支 +45g共405g",
-      "price": "39.8元（需用券）",
-      "url": "https://www.smzdm.com/p/186546509/",
-      "published_at": "2026-11-24T08:15:56+08:00",
-      "votes": 13,
-      "comments": 10
+      "id": "186725081",
+      "title": "胡姬花 古法一九一八花生油158ml",
+      "price": "1.8元",
+      "url": "https://www.smzdm.com/p/186725081/",
+      "published_at": "2026-11-25T09:39:32+08:00",
+      "votes": 57,
+      "comments": 31
     },
     {
-      "id": "186666200",
-      "title": "usmile 双氟防蛀儿童牙膏30g",
-      "price": "1.9元（需用券）",
-      "url": "https://www.smzdm.com/p/186666200/",
-      "published_at": "2026-11-24T07:15:26+08:00",
-      "votes": 25,
-      "comments": 9
+      "id": "186725775",
+      "title": "百亿补贴：酷态科 10号迷你电能棒电芯10000mAh充电宝适用于苹果17pd快充便携",
+      "price": "93.03元",
+      "url": "https://www.smzdm.com/p/186725775/",
+      "published_at": "2026-11-25T07:27:14+08:00",
+      "votes": 95,
+      "comments": 5000
     }
   ]
 }
